@@ -6,6 +6,7 @@ import Home from "./component/Home";
 import Hotels from "./component/Hotels";
 import HotelPage from "./component/HotelPage";
 import Error404 from "./component/Error404";
+import { getHomeData } from "./utils/Api";
 
 export default function App() {
   return (
