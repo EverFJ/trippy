@@ -22,7 +22,7 @@ export default class Home extends Component {
 
   render() {
     const { cities } = this.state;
-    console.log("state cities : ", this.state.cities);
+    // console.log("state cities : ", this.state.cities);
     return (
       <>
         <h1>Découvrir le monde</h1>
