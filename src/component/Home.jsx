@@ -1,31 +1,24 @@
-import React, { Component } from 'react'
-
+import React, { Component } from "react";
+import { getHomeData, config } from "../utils/Api.js";
 
 export default class Home extends Component {
-        constructor(){
-            super()
-            this.state={
-                cities:[],
-            }
+  constructor(props) {
+    super(props);
+    this.state = {
+      cities: [],
+    };
+  }
 
-        }
+  componentDidMount() {
+    this.setState({ cities: getHomeData() });
+  }
 
-        // componentDidMount(){
-        //     fetch()
-        //     .then(res => res.json())
-        //     .then(data )
-        // }
-
-
-    render() {
-
-            return (
-            <>
-                <h1>Home</h1>
-            </>
-        )
-        }
-
-        
+  render() {
+    console.log("state cities : ", this.state.cities);
+    return (
+      <>
+        <h1>Home</h1>
+      </>
+    );
+  }
 }
-
