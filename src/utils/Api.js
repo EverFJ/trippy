@@ -3,9 +3,13 @@ const config = {
 }
 
 const getHomeData = () => {
-    fetch(config.host + "/api/home")
-        .then(res => res.json())
-        .then(data => data.cities)
+    return new Promise((resolve, reject) => {
+
+        fetch(config.host + "/api/home")
+            .then(res => res.json())
+            .then(data => resolve(data.cities))
+
+    })
 }
 
 export {
