@@ -1,8 +1,7 @@
 import React from "react";
-import { BrowserRouter, Switch, Route} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import NavBar from "./component/NavBar";
 import Home from "./component/Home";
-import CityCard from "./component/CityCard";
 import Hotels from "./component/Hotels";
 import HotelPage from "./component/HotelPage";
 import Error404 from "./component/Error404";
