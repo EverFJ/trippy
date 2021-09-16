@@ -21,11 +21,14 @@ export default class HotelMap extends Component {
     console.log("center and zoom :", this.props.center, this.props.zoom);
 
     return (
-      <div>
+      <div style={{ width: "600px", height: "800px" }}>
         <h1>HotelMap</h1>
+
         <GoogleMapReact
           // bootstrapURLKeys="AIzaSyDDwOjMrXEdN5xd1LG0PdFbeoQN0DYQ7HY"
-          bootstrapURLKeys={{ key: "AIzaSyDDwOjMrXEdN5xd1LG0PdFbeoQN0DYQ7HY" }}
+          bootstrapURLKeys={{
+            key: "AIzaSyDmunNU3fQUiSKuex19oqnyJt2bL-lalPk",
+          }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
