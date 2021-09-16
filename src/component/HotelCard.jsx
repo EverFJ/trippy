@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 
 export default class HotelCard extends Component {
-
-
   render() {
-    console.log(this.props.hotel);
-    console.log(this.props.hotel.name);
+    // console.log(this.props.hotel);
+    console.log(this.props.hotel.pictures[0]);
     return (
       <>
         <div className="card" style={{ width: "18rem" }}>
-          <img src={"`http://localhost:3002/" + this.props.hotel.pictures[0]} class="card-img-top" alt="..." />
+          <img
+            src={"." + this.props.hotel.pictures[0]}
+            className="card-img-top"
+            alt="hotel image"
+          />
           <div className="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{this.props.hotel.address}</li>
-              <li class="list-group-item">{this.props.hotel.name}</li>
-              <li class="list-group-item">{this.props.hotel.stars}</li>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item">{this.props.hotel.address}</li>
+              <li className="list-group-item">{this.props.hotel.name}</li>
+              <li className="list-group-item">{this.props.hotel.stars}</li>
             </ul>
           </div>
         </div>

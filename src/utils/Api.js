@@ -1,5 +1,6 @@
 const config = {
-    host: "http://localhost:3002"
+    host: "http://localhost:3002",
+    apiKey: null
 }
 
 const getHomeData = () => {
