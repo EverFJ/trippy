@@ -5,7 +5,10 @@ export default class CityCard extends Component {
   render() {
     const { name, slug, source } = this.props;
     return (
-      <div className={name==="Paris"? "card big"  : "card"} style={{width:"18rem", height:"20rem"}} >
+      <div
+        className={name === "Paris" ? "card big" : "card"}
+        style={{ width: "18rem", height: "20rem" }}
+      >
         <p>{name}</p>
         <Link to={`/hotels/${slug}`}>
           <img
@@ -15,9 +18,8 @@ export default class CityCard extends Component {
                 : `http://via.placeholder.com/300x200`
             }
             alt="city image"
-
-            style={{width:"17rem"}}
-        />
+            style={{ width: "17rem" }}
+          />
         </Link>
       </div>
     );
