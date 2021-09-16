@@ -7,7 +7,6 @@ export default class Marker extends Component {
       width: 50,
       textAlign: "center",
       padding: 20,
-      margin: 20,
     };
     return <div style={markerStyle}>{this.props.text}</div>;
   }

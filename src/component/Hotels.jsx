@@ -21,8 +21,8 @@ export default class Hotels extends Component {
         console.log("fetch data : ", data);
         this.setState({
           hotels: data.results,
-          // center: { lat: data.center.lat, lng: data.center.lng },
-          center: data.center,
+          center: { lat: data.center.lat, lng: data.center.lon },
+          // center: data.center,
           zoom: data.zoom,
         });
       })
@@ -35,12 +35,12 @@ export default class Hotels extends Component {
     return (
       <>
         <h1>Hotels</h1>
+        <HotelMap hotels={hotels} center={center} zoom={zoom} />
         {hotels &&
           hotels.length > 0 &&
           hotels.map((elem) => (
             <>
               <HotelCard hotel={elem} />
-              <HotelMap hotels={hotels} center={center} zoom={zoom} />
             </>
           ))}
       </>
