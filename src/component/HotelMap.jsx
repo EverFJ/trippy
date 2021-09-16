@@ -5,6 +5,7 @@ import Marker from "./Marker";
 export default class HotelMap extends Component {
   render() {
     const { hotels, center, zoom } = this.props;
+    // console.log("center and zoom :", center, zoom);
 
     return (
       <div>
@@ -14,7 +15,13 @@ export default class HotelMap extends Component {
           defaultCenter={center}
           defaultZoom={zoom}
         >
-          <Marker />
+          {hotels.map((elem) => (
+            <Marker
+              lat={elem.location.lat}
+              lng={elem.location.lon}
+              text={elem.name}
+            />
+          ))}
         </GoogleMapReact>
       </div>
     );

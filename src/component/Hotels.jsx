@@ -21,6 +21,7 @@ export default class Hotels extends Component {
         console.log("fetch data : ", data);
         this.setState({
           hotels: data.results,
+          // center: { lat: data.center.lat, lng: data.center.lng },
           center: data.center,
           zoom: data.zoom,
         });
@@ -30,7 +31,7 @@ export default class Hotels extends Component {
 
   render() {
     const { hotels, center, zoom } = this.state;
-    console.log(hotels);
+    // console.log(hotels);
     return (
       <>
         <h1>Hotels</h1>
