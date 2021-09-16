@@ -9,12 +9,12 @@ export default class HotelCard extends Component {
     return (
       <>
         <div className="card" style={{ width: "18rem" }}>
-          <img src={"`http://localhost:3002/" + this.props.hotel.pictures[0]} class="card-img-top" alt="..." />
+          <img src={"https://localhost" + this.props.hotel.pictures[0]} className="card-img-top" alt="..." />
           <div className="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{this.props.hotel.address}</li>
-              <li class="list-group-item">{this.props.hotel.name}</li>
-              <li class="list-group-item">{this.props.hotel.stars}</li>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item">{this.props.hotel.address}</li>
+              <li className="list-group-item">{this.props.hotel.name}</li>
+              <li className="list-group-item">{this.props.hotel.price}€ </li>
             </ul>
           </div>
         </div>
