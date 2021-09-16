@@ -18,7 +18,7 @@ export default class HotelMap extends Component {
 
   render() {
     const { hotels } = this.props;
-    console.log("center and zoom :", this.props.center, this.props.zoom);
+    // console.log("center and zoom :", this.props.center, this.props.zoom);
 
     return (
       <div style={{ width: "600px", height: "800px" }}>
