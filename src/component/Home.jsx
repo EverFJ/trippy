@@ -30,6 +30,7 @@ export default class Home extends Component {
           cities.map((elem) => {
             return (
               <CityCard
+                key={elem.name}
                 name={elem.name}
                 slug={elem.slug}
                 source={elem.source}

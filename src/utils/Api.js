@@ -8,6 +8,7 @@ const getHomeData = () => {
         fetch(config.host + "/api/home")
             .then(res => res.json())
             .then(data => resolve(data.cities))
+            .catch((err) => console.error(err));
 
     })
 }
