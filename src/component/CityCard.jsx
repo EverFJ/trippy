@@ -8,7 +8,14 @@ export default class CityCard extends Component {
       <div>
         <p>{name}</p>
         <Link to={`/hotels/${slug}`}>
-          <img src={`http://localhost:3002/${source}`} alt="city image" />
+          <img
+            src={
+              source
+                ? `http://localhost:3002/${source}`
+                : `http://via.placeholder.com/300x200`
+            }
+            alt="city image"
+          />
         </Link>
       </div>
     );
