@@ -5,6 +5,7 @@ export default class CityCard extends Component {
   render() {
     const { name, slug, source } = this.props;
     return (
+    <div className="container-fluid d-flex ">
       <div
         className={name === "Paris" ? "card big" : "card"}
         style={{ width: "18rem", height: "20rem" }}
@@ -21,6 +22,7 @@ export default class CityCard extends Component {
             style={{ width: "17rem" }}
           />
         </Link>
+      </div>
       </div>
     );
   }
