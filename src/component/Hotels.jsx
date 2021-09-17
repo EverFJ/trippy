@@ -22,7 +22,6 @@ export default class Hotels extends Component {
         this.setState({
           hotels: data.results,
           center: { lat: data.center.lat, lng: data.center.lon },
-          // center: data.center,
           zoom: data.zoom,
         });
       })
