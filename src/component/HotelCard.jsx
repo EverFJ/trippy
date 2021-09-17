@@ -8,7 +8,8 @@ export default class HotelCard extends Component {
       <>
         <div className="card" style={{ width: "18rem" }}>
           <img
-            src={"." + this.props.hotel.pictures[0]}
+            // src={"." + this.props.hotel.pictures[0]}
+            src="./img/hotels/597573_1.jpg"
             className="card-img-top"
             alt="hotel image"
           />
