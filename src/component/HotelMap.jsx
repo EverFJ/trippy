@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
+import { apiKey } from "../utils/Api";
 
 export default class HotelMap extends Component {
   // static defaultProps = {
@@ -17,6 +18,7 @@ export default class HotelMap extends Component {
   };
 
   render() {
+    console.log(apiKey);
     const { hotels } = this.props;
     // console.log("center and zoom :", this.props.center, this.props.zoom);
 
@@ -26,8 +28,9 @@ export default class HotelMap extends Component {
 
         <GoogleMapReact
           // bootstrapURLKeys="AIzaSyDDwOjMrXEdN5xd1LG0PdFbeoQN0DYQ7HY"
+          // key: "AIzaSyDmunNU3fQUiSKuex19oqnyJt2bL-lalPk",
           bootstrapURLKeys={{
-            key: "AIzaSyDmunNU3fQUiSKuex19oqnyJt2bL-lalPk",
+            key: apiKey,
           }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
