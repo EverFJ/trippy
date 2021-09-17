@@ -3,10 +3,10 @@ import React, { Component } from "react";
 export default class Marker extends Component {
   render() {
     const markerStyle = {
-      backgroundColor: "white",
-      width: 50,
+      backgroundColor: "orange",
+      width: 70,
       textAlign: "center",
-      padding: 20,
+      padding: 5,
     };
     return <div style={markerStyle}>{this.props.text}</div>;
   }

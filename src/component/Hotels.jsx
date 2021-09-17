@@ -36,13 +36,11 @@ export default class Hotels extends Component {
       <>
         <h1>Hotels</h1>
         <HotelMap hotels={hotels} center={center} zoom={zoom} />
-        {hotels &&
-          hotels.length > 0 &&
-          hotels.map((elem) => (
-            <>
-              <HotelCard hotel={elem} />
-            </>
-          ))}
+        <div className="container d-flex flex-wrap justify-content-center">
+          {hotels &&
+            hotels.length > 0 &&
+            hotels.map((elem) => <HotelCard hotel={elem} />)}
+        </div>
       </>
     );
   }

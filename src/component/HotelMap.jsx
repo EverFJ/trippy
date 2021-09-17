@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
-import { apiKey } from "../utils/Api";
+import { apiKey, apiKey2 } from "../utils/Api";
 
 export default class HotelMap extends Component {
   // static defaultProps = {
@@ -18,31 +18,30 @@ export default class HotelMap extends Component {
   };
 
   render() {
-    console.log(apiKey);
     const { hotels } = this.props;
     // console.log("center and zoom :", this.props.center, this.props.zoom);
 
     return (
-      <div style={{ width: "600px", height: "800px" }}>
-        <h1>HotelMap</h1>
+      <div className="container">
+        <div className="m-5" style={{ width: "800px", height: "600px" }}>
+          <h1>HotelMap</h1>
 
-        <GoogleMapReact
-          // bootstrapURLKeys="AIzaSyDDwOjMrXEdN5xd1LG0PdFbeoQN0DYQ7HY"
-          // key: "AIzaSyDmunNU3fQUiSKuex19oqnyJt2bL-lalPk",
-          bootstrapURLKeys={{
-            key: apiKey,
-          }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-        >
-          {hotels.map((elem) => (
-            <Marker
-              lat={elem.location.lat}
-              lng={elem.location.lon}
-              text={elem.name}
-            />
-          ))}
-        </GoogleMapReact>
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: apiKey,
+            }}
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}
+          >
+            {hotels.map((elem) => (
+              <Marker
+                lat={elem.location.lat}
+                lng={elem.location.lon}
+                text={elem.name}
+              />
+            ))}
+          </GoogleMapReact>
+        </div>
       </div>
     );
   }

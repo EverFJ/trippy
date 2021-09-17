@@ -1,4 +1,5 @@
 const apiKey = process.env.REACT_APP_API_KEY
+const apiKey2 = process.env.REACT_APP_API_KEY2
 
 const config = {
     host: "http://localhost:3002",
@@ -18,6 +19,7 @@ const getHomeData = () => {
 
 export {
     apiKey,
+    apiKey2,
     config,
     getHomeData
 }
